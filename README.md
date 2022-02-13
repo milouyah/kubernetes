@@ -1,5 +1,7 @@
 # kubernetes
 
+## [ready](./ready/README.md)
+## [connect](./connect/README.md)
 
 
 ## Kubernetes' primary concepts
