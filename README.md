@@ -2,11 +2,13 @@
 
 ## [ready](./ready/README.md)
 ## [connect](./connect/README.md)
+## [helm](./helm/README.md)
+## [kubectl](./kubectl/README.md)
 
 
 ## Kubernetes' primary concepts
 * `Clusters` : A cluster is a collection of hosts (nodes) 
-* `Nodes` : A node is a single host. It may be a physical or virtual machine. Its job is to run pods.
+* [`Nodes`](https://kubernetes.io/docs/concepts/architecture/nodes/) : A node is a single host. It may be a physical or virtual machine. Its job is to run pods. The components on a node include the `kubelet`, `a container runtime`, and `the kube-proxy`.
 * `The master` : The master is the control plane of Kubernetes. It consists of several components, such as an API server, a scheduler, and a controller manager. 
 * `Pods` : A pod is the unit of work in Kubernetes. Each pod contains one or more containers.  All the containers in a pod have the same IP address and port space; they can communicate using localhost or standard inter-process communication.
 * `Labels` : Labels are key-value pairs that are used to group together sets of objects – very often pods.  Note that labels are dedicated to identifying objects and not for attaching arbitrary metadata to objects. This is what annotations are for.
@@ -19,7 +21,7 @@
 * `Names`
 * `Namespaces` : A namespace is a kind of virtual cluster.
 
-
+* [`kubelet`](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) :The kubelet is the primary "node agent" that runs on each node.
 
 ## The Kubernetes APIs
 * DaemonSets
