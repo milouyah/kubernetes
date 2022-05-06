@@ -17,21 +17,26 @@ kubectl get po -A
 
 * Minikube: https://kubernetes.io/docs/tasks/tools/install-minikube/
 
+
+
+## Start
+### Linux
+```bash
+sudo minikube start --force --driver==docker
+```
+
 ```bash
 $ minikube ssh
 ```
 
+### Run
 ```bash
 $ kubectl cluster-info
-Kubernetes control plane is running at https://127.0.0.1:53673
-CoreDNS is running at https://127.0.0.1:53673/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+$ kubectl get nodes
+$ kubectl get pods -A
 ```
 
-```bash
-kubectl get nodes
-NAME       STATUS   ROLES                  AGE    VERSION
-minikube   Ready    control-plane,master   112m   v1.23.1
-PS C:\WINDOWS\system32>
-```
+
+### [services](./services.md)
+### [nodes](./nodes.md)
+### [pods](./pods.md)
