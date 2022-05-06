@@ -4,6 +4,7 @@
 ## [connect](./connect/README.md)
 ## [helm](./helm/README.md)
 ## [kubectl](./kubectl/README.md)
+## [minikube](./minikube/README.md)
 
 
 ## Kubernetes' primary concepts
