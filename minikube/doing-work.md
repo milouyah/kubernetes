@@ -11,3 +11,7 @@ $ mk ip
 $ k get service echo --output="jsonpath='{.spec.ports[0].nodePort}'"
 $ $ curl http://192.168.99.103:31800/hi
 ```
+
+# Trouble Shooting
+* ErrImageFull
+> copy certs files to `.minikube/certs`.

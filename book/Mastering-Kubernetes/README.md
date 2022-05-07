@@ -1,268 +1,93 @@
 
 # [Mastering Kubernetes](https://subscription.packtpub.com/product/programming/9781839211256)
 
+* [github](https://github.com/PacktPublishing/Mastering-Kubernetes-Third-Edition)
 
-# Chapter 1: Understanding Kubernetes Architecture 
-## What is Kubernetes? 
-### What Kubernetes is not 2
-### Understanding container orchestration 3
-#### Physical machines, virtual machines, and containers 3
-#### The benefits of containers 3
-#### Containers in the cloud 4
-#### Cattle versus pets 5
-
-## Kubernetes concepts 5
-### Clusters 6
-### Nodes 6
-### The master 7
-### Pods 7
-### Labels 8
-### Annotations 8
-### Label selectors 9
-### Services 9
-### Volume 10
-### Replication controllers and replica sets 10
-### StatefulSet 10
-### Secrets 11
-### Names 11
-### Namespaces 11
-
-## Diving into Kubernetes architecture in depth 12
-### Distributed system design patterns 12
-#### The sidecar pattern 13
-#### The ambassador pattern 13
-#### The adapter pattern 13
-#### Multi-node patterns 14
-
-### The Kubernetes APIs 14
-#### Resource categories 15
-
-### Kubernetes components 18
-#### Master components 18
-#### Node components 21
-
-## Kubernetes runtimes 22
-### The container runtime interface (CRI) 23
-### Docker 25
-### rkt 27
-#### App container 27
-### CRI-O 27
-### Hyper containers 28
-#### Frakti 28
-#### Stackube 28
-
-## Continuous integration and deployment 28
-### What is a CI/CD pipeline? 29
-### Designing a CI/CD pipeline for Kubernetes 30
+# [Chapter 1: Understanding Kubernetes Architecture](./Chapter1/README.md)
+# [Chapter 2: Creating Kubernetes Clusters](./Chapter2/README.md)
+# [Chapter 3: High Availability and Reliability](./Chapter3/README.md)
+# [Chapter 4: Securing Kubernetes](./Chapter4/README.md)
 
 ----
 
-# Chapter 2: Creating Kubernetes Clusters 31
-Overview 31
-Creating a single-node cluster with Minikube 32
-Meet kubectl 32
-Quick introduction to Minikube 33
-Getting ready 33
-On Windows 33
-On macOS 34
-Creating the cluster 35
-Troubleshooting 36
-Checking out the cluster 37
-Doing work 38
-Examining the cluster with the dashboard 40
-Creating a multi-node cluster with KinD 42
-Quick introduction to KinD 42
-Installing KinD 42
-Creating the cluster with KinD 43
-Doing work with KinD 46
-Accessing Kubernetes services locally though a proxy 46
-Creating a multi-node cluster with k3d 47
-Quick introduction to k3s and k3d 48
-Table of Contents
-[ iii ]
-Installing k3d 48
-Creating the cluster with k3d 49
-Comparing Minikube, KinD, and k3d 51
-Creating clusters in the cloud (GCP, AWS, Azure) 52
-The cloud-provider interface 52
-GCP 53
-AWS 53
-Kubernetes on EC2 54
-AWS EKS 55
-Fargate 55
-Azure 56
-Other cloud providers 56
-Once upon a time in China 57
-IBM Kubernetes Service 57
-Oracle Container Service 58
-Creating a bare-metal cluster from scratch 58
-Use cases for bare metal 58
-When should you consider creating a bare-metal cluster? 59
-Understanding the process 59
-Using virtual private cloud infrastructure 60
-Building your own cluster with Kubespray 60
-Building your cluster with KRIB 60
-Building your cluster with RKE 61
-Bootkube 61
-References 62
-
-----
-
-# Chapter 3: High Availability and Reliability 63
-## High availability concepts 64
-Redundancy 64
-Hot swapping 64
-Leader election 65
-Smart load balancing 65
-Idempotency 66
-Self-healing 66
-High availability best practices 66
-Creating highly available clusters 67
-Making your nodes reliable 68
-Protecting your cluster state 69
-Clustering etcd 69
-Verifying the etcd cluster 73
-Protecting your data 73
-Running redundant API servers 74
-Table of Contents
-[ iv ]
-Running leader election with Kubernetes 74
-Making your staging environment highly available 75
-Testing high availability 76
-High availability, scalability, and capacity planning 77
-Installing the cluster autoscaler 78
-Considering the vertical pod autoscaler 80
-Live cluster updates 80
-Rolling updates 81
-Complex deployments 83
-Blue-green deployments 84
-Canary deployments 85
-Managing data-contract changes 86
-Migrating data 86
-Deprecating APIs 87
-Large cluster performance, cost, and design trade-offs 88
-Availability requirements 88
-Best effort 88
-Maintenance windows 89
-Quick recovery 90
-Zero downtime 90
-Site reliability engineering 92
-Performance and data consistency 93
-Summary 93
-References 94
-Chapter 4: Securing Kubernetes 95
-Understanding Kubernetes security challenges 96
-Node challenges 96
-Network challenges 97
-Image challenges 99
-Configuration and deployment challenges 100
-Pod and container challenges 101
-Organizational, cultural, and process challenges 102
-Hardening Kubernetes 103
-Understanding service accounts in Kubernetes 103
-How does Kubernetes manage service accounts? 105
-Accessing the API server 105
-Authenticating users 106
-Authorizing requests 108
-Using admission control plugins 110
-Securing pods 112
-Using a private image repository 112
-ImagePullSecrets 112
-Table of Contents
-[ v ]
-Specifying a security context 113
-Protecting your cluster with AppArmor 114
-Pod security policies 116
-Authorizing pod security policies via RBAC 117
-Managing network policies 118
-Choosing a supported networking solution 119
-Defining a network policy 119
-Limiting egress to external networks 121
-Cross-namespace policies 122
-Using secrets 122
-Storing secrets in Kubernetes 122
-Configuring encryption at rest 122
-Creating secrets 123
-Decoding secrets 124
-Using secrets in a container 124
-Running a multi-user cluster 125
-The case for a multi-user cluster 126
-Using namespaces for safe multi-tenancy 126
-Avoiding namespace pitfalls 127
-Summary 128
-References 128
-Chapter 5: Using Kubernetes Resources in Practice 129
-Designing the Hue platform 129
-Defining the scope of Hue 130
-Smart reminders and notifications 130
+# Chapter 5: Using Kubernetes Resources in Practice 129
+## Designing the Hue platform 129
+### Defining the scope of Hue 130
+* Smart reminders and notifications 130
 Security, identity, and privacy 130
 Hue components 131
 Hue microservices 133
-Planning workflows 135
+### Planning workflows 135
 Automatic workflows 135
 Human workflows 135
 Budget-aware workflows 135
-Using Kubernetes to build the Hue platform 136
-Using kubectl effectively 136
-Understanding kubectl resource configuration files 137
+
+## Using Kubernetes to build the Hue platform 136
+### Using kubectl effectively 136
+### Understanding kubectl resource configuration files 137
 ApiVersion 138
 Kind 138
 Metadata 138
 Spec 138
-Deploying long-running microservices in pods 139
+### Deploying long-running microservices in pods 139
 Creating pods 139
 Decorating pods with labels 141
 Deploying long-running processes with deployments 142
 Updating a deployment 143
-Separating internal and external services 144
-Table of Contents
-[ vi ]
-Deploying an internal service 145
-Creating the Hue-reminders service 146
-Exposing a service externally 148
-Ingress 149
-Advanced scheduling 150
-Node selector 150
-Taints and tolerations 151
-Node affinity and anti-affinity 153
-Pod affinity and anti-affinity 153
-Using namespaces to limit access 154
-Using kustomization for hierarchical cluster structures 156
-Understanding the basics of kustomize 156
-Configuring the directory structure 157
-Applying kustomizations 158
+
+## Separating internal and external services 144
+### Deploying an internal service 145
+### Creating the Hue-reminders service 146
+### Exposing a service externally 148
+* Ingress 149
+
+## Advanced scheduling 150
+### Node selector 150
+### Taints and tolerations 151
+### Node affinity and anti-affinity 153
+### Pod affinity and anti-affinity 153
+
+## Using namespaces to limit access 154
+## Using kustomization for hierarchical cluster structures 156
+### Understanding the basics of kustomize 156
+### Configuring the directory structure 157
+### Applying kustomizations 158
 Patching 160
 Kustomizing the entire staging namespace 160
-Launching jobs 162
-Running jobs in parallel 163
-Cleaning up completed jobs 164
-Scheduling cron jobs 164
-Mixing non-cluster components 166
-Outside-the-cluster-network components 166
-Inside-the-cluster-network components 167
-Managing the Hue platform with Kubernetes 167
-Using liveness probes to ensure your containers are alive 167
-Using readiness probes to manage dependencies 168
-Employing init containers for orderly pod bring-up 169
-Pod readiness and readiness gates 170
-Sharing with DaemonSet pods 171
-Evolving the Hue platform with Kubernetes 172
-Utilizing Hue in an enterprise 172
-Advancing science with Hue 173
-Educating the kids of the future with Hue 173
-Summary 173
-References 174
-Chapter 6: Managing Storage 175
-Persistent volumes walkthrough 175
-Volumes 176
-Using emptyDir for intra-pod communication 176
-Using HostPath for intra-node communication 178
-Using local volumes for durable node storage 180
-Provisioning persistent volumes 181
-Table of Contents
-[ vii ]
-Provisioning persistent volumes externally 182
-Creating persistent volumes 182
+
+## Launching jobs 162
+### Running jobs in parallel 163
+### Cleaning up completed jobs 164
+### Scheduling cron jobs 164
+
+## Mixing non-cluster components 166
+### Outside-the-cluster-network components 166
+### Inside-the-cluster-network components 167
+### Managing the Hue platform with Kubernetes 167
+* Using liveness probes to ensure your containers are alive 167
+### Using readiness probes to manage dependencies 168
+### Employing init containers for orderly pod bring-up 169
+### Pod readiness and readiness gates 170
+### Sharing with DaemonSet pods 171
+
+## Evolving the Hue platform with Kubernetes 172
+### Utilizing Hue in an enterprise 172
+### Advancing science with Hue 173
+### Educating the kids of the future with Hue 173
+
+## References 174
+
+----
+
+# Chapter 6: Managing Storage 175
+## Persistent volumes walkthrough 175
+###  Volumes 176
+* Using emptyDir for intra-pod communication 176
+* Using HostPath for intra-node communication 178
+* Using local volumes for durable node storage 180
+* Provisioning persistent volumes 181
+### Provisioning persistent volumes externally 182
+### Creating persistent volumes 182
 Capacity 183
 Volume mode 183
 Access modes 183
@@ -270,44 +95,51 @@ Reclaim policy 184
 Storage class 184
 Volume type 185
 Mount options 185
-Making persistent volume claims 185
-Mounting claims as volumes 188
-Raw block volumes 189
-Storage classes 191
-Default storage class 192
-Demonstrating persistent volume storage end to end 192
-Public cloud storage volume types – GCE, AWS, and Azure 198
+
+### Making persistent volume claims 185
+### Mounting claims as volumes 188
+### Raw block volumes 189
+### Storage classes 191
+* Default storage class 192
+### Demonstrating persistent volume storage end to end 192
+
+
+## Public cloud storage volume types – GCE, AWS, and Azure 198
 Amazon EBS 198
 Amazon EFS 199
 GCE persistent disk 201
 Azure data disk 202
 Azure Files 203
-GlusterFS and Ceph volumes in Kubernetes 204
-Using GlusterFS 205
+
+## GlusterFS and Ceph volumes in Kubernetes 204
+### Using GlusterFS 205
 Creating endpoints 205
 Adding a GlusterFS Kubernetes service 206
 Creating pods 207
-Using Ceph 208
+### Using Ceph 208
 Connecting to Ceph using RBD 208
 Connecting to Ceph using CephFS 210
-Flocker as a clustered container data volume manager 211
-Integrating enterprise storage into Kubernetes 212
-Rook – the new kid on the block 213
-Projecting volumes 214
-Using out-of-tree volume plugins with FlexVolume 215
-The Container Storage Interface 216
-Volume snapshotting and cloning 217
+
+## Flocker as a clustered container data volume manager 211
+## Integrating enterprise storage into Kubernetes 212
+### Rook – the new kid on the block 213
+
+## Projecting volumes 214
+## Using out-of-tree volume plugins with FlexVolume 215
+## The Container Storage Interface 216
+### Volume snapshotting and cloning 217
 Volume snapshots 217
 Volume cloning 218
-Summary 219
-Chapter 7: Running Stateful Applications with Kubernetes 221
-Stateful versus stateless applications in Kubernetes 221
+
+----
+
+# Chapter 7: Running Stateful Applications with Kubernetes 221
+## Stateful versus stateless applications in Kubernetes 221
 Understanding the nature of distributed data-intensive apps 222
 Why manage state in Kubernetes? 222
 Why manage state outside of Kubernetes? 222
-Table of Contents
-[ viii ]
-Shared environment variables versus DNS records for discovery 223
+
+## Shared environment variables versus DNS records for discovery 223
 Accessing external data stores via DNS 223
 Accessing external data stores via environment variables 223
 Consuming a ConfigMap as an environment variable 224
@@ -315,52 +147,57 @@ Using a redundant in-memory state 225
 Using DaemonSet for redundant persistent storage 226
 Applying persistent volume claims 226
 Utilizing StatefulSets 226
-Running a Cassandra cluster in Kubernetes 228
+
+## Running a Cassandra cluster in Kubernetes 228
 Quick introduction to Cassandra 229
 The Cassandra Docker image 230
 Hooking up Kubernetes and Cassandra 238
 Creating a Cassandra headless service 241
 Using StatefulSets to create the Cassandra cluster 241
-Summary 246
-Chapter 8: Deploying and Updating Applications 247
-Horizontal pod autoscaling 248
-Declaring an HPA 248
-Custom metrics 251
-Autoscaling with Kubectl 251
-Performing rolling updates with autoscaling 254
-Handling scarce resources with limits and quotas 257
-Enabling resource quotas 258
-Resource quota types 258
+
+----
+
+# Chapter 8: Deploying and Updating Applications 247
+## Horizontal pod autoscaling 248
+### Declaring an HPA 248
+### Custom metrics 251
+### Autoscaling with Kubectl 251
+
+## Performing rolling updates with autoscaling 254
+
+## Handling scarce resources with limits and quotas 257
+### Enabling resource quotas 258
+### Resource quota types 258
 Compute resource quota 258
 Storage resource quota 259
 Object count quota 260
-Quota scopes 261
-Resource quotas and priority classes 261
-Requests and limits 262
-Working with quotas 262
+### Quota scopes 261
+### Resource quotas and priority classes 261
+### Requests and limits 262
+### Working with quotas 262
 Using namespace-specific context 262
 Creating quotas 262
 Using limit ranges for default compute quotas 267
-Choosing and managing the cluster capacity 268
-Choosing your node types 268
-Choosing your storage solutions 269
-Trading off cost and response time 269
-Using multiple node configurations effectively 270
-Benefiting from elastic cloud resources 270
+
+## Choosing and managing the cluster capacity 268
+### Choosing your node types 268
+### Choosing your storage solutions 269
+### Trading off cost and response time 269
+### Using multiple node configurations effectively 270
+### Benefiting from elastic cloud resources 270
 Autoscaling instances 270
 Mind your cloud quotas 271
 Manage regions carefully 271
-Considering container-native solutions 272
-Table of Contents
-[ ix ]
-Pushing the envelope with Kubernetes 273
-Improving the performance and scalability of Kubernetes 274
+### Considering container-native solutions 272
+
+## Pushing the envelope with Kubernetes 273
+### Improving the performance and scalability of Kubernetes 274
 Caching reads in the API server 274
 The pod lifecycle event generator 274
 Serializing API objects with protocol buffers 276
 etcd3 276
 Other optimizations 277
-Measuring the performance and scalability of Kubernetes 277
+### Measuring the performance and scalability of Kubernetes 277
 The Kubernetes SLOs 277
 Measuring API responsiveness 277
 Measuring end-to-end pod startup time 279
@@ -369,7 +206,10 @@ Introducing the Kubemark tool 281
 Setting up a Kubemark cluster 281
 Comparing a Kubemark cluster to a real-world cluster 281
 Summary 282
-Chapter 9: Packaging Applications 283
+
+----
+
+# Chapter 9: Packaging Applications 283
 Understanding Helm 283
 The motivation for Helm 284
 The Helm 2 architecture 284
@@ -410,7 +250,10 @@ Embedding built-in objects 311
 Feeding values from a file 312
 Scope, dependencies, and values 313
 Summary 315
-Chapter 10: Exploring Advanced Networking 317
+
+----
+
+# Chapter 10: Exploring Advanced Networking 317
 Understanding the Kubernetes networking model 318
 Intra-pod communication (container to container) 318
 Inter-pod communication (pod to pod) 318
@@ -468,7 +311,10 @@ First look at the loopback plugin 352
 Building on the CNI plugin skeleton 356
 Reviewing the bridge plugin 359
 Summary 362
-Chapter 11: Running Kubernetes on Multiple Clouds
+
+----
+
+# Chapter 11: Running Kubernetes on Multiple Clouds
 and Cluster Federation 365
 The history of cluster federation on Kubernetes 366
 Understanding cluster federation 366
@@ -522,7 +368,10 @@ The gardenctl CLI 396
 Extending Gardener 397
 Gardener ring 401
 Summary 402
-Chapter 12: Serverless Computing on Kubernetes 405
+
+----
+
+# Chapter 12: Serverless Computing on Kubernetes 405
 Understanding serverless computing 405
 Running long-running services on "serverless" infrastructure 406
 Running FaaS on "serverless" infrastructure 407
@@ -560,7 +409,10 @@ Knative and riff 439
 Understanding riff runtimes 439
 Installing riff with Helm 2 439
 Summary 442
-Chapter 13: Monitoring Kubernetes Clusters 443
+
+----
+
+# Chapter 13: Monitoring Kubernetes Clusters 443
 Understanding observability 444
 Logging 444
 Log format 445
@@ -608,7 +460,10 @@ Dashboards versus alerts 480
 Logs versus metrics versus error reports 481
 Detecting performance and root cause with distributed tracing 482
 Summary 482
-Chapter 14: Utilizing Service Meshes 483
+
+----
+
+# Chapter 14: Utilizing Service Meshes 483
 What is a service mesh? 483
 Control plane and data plane 487
 Choosing a service mesh 487
@@ -643,7 +498,10 @@ Metrics 516
 Distributed tracing 519
 Visualizing your service mesh with Kiali 522
 Summary 523
-Chapter 15: Extending Kubernetes 525
+
+----
+
+# Chapter 15: Extending Kubernetes 525
 Working with the Kubernetes API 525
 Understanding OpenAPI 526
 Setting up a proxy 526
@@ -700,7 +558,10 @@ Configuring a webhook admission controller on the fly 568
 Providing custom metrics for horizontal pod autoscaling 570
 Extending Kubernetes with custom storage 571
 Summary 572
-Chapter 16: The Future of Kubernetes 575
+
+----
+
+# Chapter 16: The Future of Kubernetes 575
 The Kubernetes momentum 576
 The importance of the CNCF 576
 Project curation 576
@@ -721,9 +582,6 @@ Serverless computing 583
 Kubernetes on the Edge 583
 Native CI/CD 584
 Operators 584
-Table of Contents
-[ xvii ]
-Summary 585
-References 585
-Other Books You May Enjoy 587
-Index 591
+
+## References 585
+## Other Books You May Enjoy 587

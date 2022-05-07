@@ -12,11 +12,10 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 # Start
 minikube start
+# or
+minikube start --force --driver=docker
 kubectl get po -A
 ```
-
-* Minikube: https://kubernetes.io/docs/tasks/tools/install-minikube/
-
 
 
 ## Start
@@ -40,3 +39,8 @@ $ kubectl get pods -A
 ### [services](./services.md)
 ### [nodes](./nodes.md)
 ### [pods](./pods.md)
+
+
+# ETC
+## How to access minikube machine from outside?
+* see `https://stackoverflow.com/questions/54731887/how-to-access-minikube-machine-from-outside`
