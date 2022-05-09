@@ -1,10 +1,18 @@
 # kubernetes
 
+## [pods](./pods/README.md)
+## [services](./services/README.md)
+
 ## [ready](./ready/README.md)
 ## [connect](./connect/README.md)
-## [helm](./helm/README.md)
+
 ## [kubectl](./kubectl/README.md)
 ## [minikube](./minikube/README.md)
+
+
+# Tools
+## [helm](./helm/README.md)
+## [kustomize](./kubectl/README.md)
 
 
 ## Kubernetes' primary concepts
@@ -81,3 +89,12 @@
 ##### Metadata
 
 
+# Downloads
+* [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+* [SuperPutty](https://github.com/jimradford/superputty/releases/tag/1.4.10)
+
+
+
+
+# Links
+* [chocolatey](https://chocolatey.org/)

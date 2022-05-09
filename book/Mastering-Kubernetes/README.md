@@ -6,7 +6,7 @@
 # [Chapter 1: Understanding Kubernetes Architecture](./Chapter1/README.md)
 # [Chapter 2: Creating Kubernetes Clusters](./Chapter2/README.md)
 # [Chapter 3: High Availability and Reliability](./Chapter3/README.md)
-# [Chapter 4: Securing Kubernetes](./Chapter4/README.md)
+# [Chapter 4: Securing Kubernetes](./Chapter4-Securing-Kubernetes/README.md)
 
 ----
 

@@ -9,4 +9,5 @@ The kubectl command line tool lets you control Kubernetes clusters. For configur
 
 ```bash
 $ kubectl get pods --all-namespaces
+$ kubectl get pods -o wide
 ```
