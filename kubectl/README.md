@@ -11,3 +11,10 @@ The kubectl command line tool lets you control Kubernetes clusters. For configur
 $ kubectl get pods --all-namespaces
 $ kubectl get pods -o wide
 ```
+
+
+# Commnads
+## [Mater node](https://stackoverflow.com/questions/63549272/how-to-list-only-nodes-which-are-master-from-kubectl-output)
+```
+kubectl get nodes -l node-role.kubernetes.io/master -o 'jsonpath={.items[*].metadata.name}'
+```
