@@ -1,15 +1,15 @@
 
 # [Minikube](https://minikube.sigs.k8s.io/docs/)
 
-
-## Installation
+## Install
 ### Linux
-
 ```bash
-# Install
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
 
+## Run
+```bash
 # Start
 minikube start
 # or
@@ -17,9 +17,7 @@ minikube start --force --driver=docker
 kubectl get po -A
 ```
 
-
 ## Start
-### Linux
 ```bash
 sudo minikube start --force --driver==docker
 ```
@@ -28,18 +26,10 @@ sudo minikube start --force --driver==docker
 $ minikube ssh
 ```
 
-### Run
+## [Dashboard](https://minikube.sigs.k8s.io/docs/handbook/dashboard/)
 ```bash
-$ kubectl cluster-info
-$ kubectl get nodes
-$ kubectl get pods -A
+minikube dashboard
 ```
-
-
-### [services](./services.md)
-### [nodes](./nodes.md)
-### [pods](./pods.md)
-
 
 # ETC
 ## How to access minikube machine from outside?
