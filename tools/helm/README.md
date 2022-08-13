@@ -8,12 +8,14 @@
 - Package security 관리
 ```
 
-
-
-
 ## Install Helm
+
+### Windows
 ```bash
 choco install kubernetes-helm
+```
+### Linux
+```bash
 ```
 
 ## Initialize a Helm Chart Repository
@@ -26,7 +28,6 @@ $ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update 
 helm install bitnami/mysql --generate-name 
 ```
-
 
 # From Book
 ```
@@ -45,3 +46,8 @@ helm install metallb edu/metallb \
 ```
 
 * https://artifacthub.io/ --> metallb(helm)
+
+
+## Books
+## Learning
+

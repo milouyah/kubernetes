@@ -40,7 +40,31 @@ spec:
 
 ## gitRepo
 * 기본적으로 emptyDir
-* 
 
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gitrepo-volume-pod
+spec:
+  containers:
+  - image: nginx:alpine
+    name: web-server
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html
+      readOnly: true
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  volumes:
+  - name: html
+    gitRepo:
+      repository: https://github.com/luksa/kubia-website-example.git
+      revision: master
+      directory: .
+```
+## hostPath
+* hostPath volume는 노드 파일 시스템의 특정 팡릴이나 디렉토리를 가리킨다.
 
 
