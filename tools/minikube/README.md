@@ -1,7 +1,7 @@
 
 # [Minikube](https://minikube.sigs.k8s.io/docs/)
 
-## Install
+## [Install](https://minikube.sigs.k8s.io/docs/start/)
 ### Linux
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
