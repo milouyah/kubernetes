@@ -1,10 +1,7 @@
 # kubernetes
 
-
 ## [Kubernetes](https://kubernetes.io/)
 ## [Helm](https://helm.sh/)
-
-
 
 ## [Basic](./basic/README.md)
 ## [Monitoring](./monitoring/README.md)
@@ -17,18 +14,9 @@
 
 # [Tools](./tools/README.md)
 
-# Monitoring
-* `수집`->`통합`->`시각화`
-## [Prometheus](./prometheus/README.md)
-## [Grafana](./grafana/README.md)
-## [Kibana(for Elastic Search)](./kibana/README.md)\
-
-
-# ETC
-
-
 
 # Links
 * [chocolatey](https://chocolatey.org/)
 * [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 * [SuperPutty](https://github.com/jimradford/superputty/releases/tag/1.4.10)
+* [모두의 MLOps](https://mlops-for-all.github.io/)

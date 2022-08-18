@@ -34,3 +34,4 @@ minikube dashboard
 # ETC
 ## How to access minikube machine from outside?
 * see `https://stackoverflow.com/questions/54731887/how-to-access-minikube-machine-from-outside`
+* [(모두의 MLOps) 4.2. Install Kubernetes - Minikube ](https://mlops-for-all.github.io/docs/setup-kubernetes/kubernetes-with-minikube/)
