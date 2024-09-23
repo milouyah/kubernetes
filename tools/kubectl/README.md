@@ -7,61 +7,20 @@ For configuration, kubectl looks for a file named `config` in the `$HOME/.kube` 
 You can specify other kubeconfig files by setting the `KUBECONFIG` environment variable or by setting the `--kubeconfig` flag.
 
 
-## Install `kubectl`
+## [Install and Setup Kubectl `kubectl`](https://kubernetes.io/docs/tasks/tools/#kubectl
 네, **`kubectl`**은 Kubernetes 클러스터를 관리하는 커맨드 라인 도구로, 별도로 설치해야 합니다. `kubectl`은 Kubernetes API와 통신하여 클러스터 관리 작업을 수행합니다. Ubuntu에서 `kubectl`을 설치하려면 다음 단계를 따르면 됩니다.
 
-### Ubuntu
+### On Linux
 
-#### 1. Google Cloud의 APT 저장소 추가
-
-먼저, `kubectl` 패키지를 받기 위해 Google Cloud의 APT 저장소를 추가해야 합니다.
 
 ```bash
-sudo apt-get update
-sudo apt-get install -y apt-transport-https ca-certificates curl
-curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-```
+curl -L0 "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
-#### 2. Kubernetes APT 저장소 추가
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
-Google Kubernetes APT 저장소를 추가합니다.
 
-```bash
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-```
-
-#### 3. `kubectl` 설치
-
-저장소를 추가한 후, `kubectl`을 설치합니다.
-
-```bash
-sudo apt-get update
-sudo apt-get install -y kubectl
-```
-
-#### 4. 설치 확인
-
-설치가 완료되면 `kubectl`이 제대로 설치되었는지 확인할 수 있습니다.
-
-```bash
 kubectl version --client
 ```
-
-이 명령어를 실행하면, 설치된 `kubectl` 버전 정보가 출력됩니다.
-
-### 5. `kubectl` 사용
-
-`kubectl`이 설치된 후, 클러스터와 상호작용할 수 있습니다. 만약 로컬에서 Minikube, Kind, 또는 외부 클러스터를 사용 중이라면, 해당 클러스터와 통신하기 위한 `kubeconfig` 파일이 필요합니다.
-
-- 예시: Minikube 클러스터에서 `kubectl`을 사용하려면 먼저 Minikube를 시작한 후 `kubectl`을 통해 클러스터에 명령을 내립니다.
-
-```bash
-minikube start
-kubectl get pods
-```
-
-이제 `kubectl`을 설치했으므로, Kubernetes 클러스터를 관리하는 데 사용할 수 있습니다.
-
 
 
 ## [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
