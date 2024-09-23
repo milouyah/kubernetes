@@ -1,6 +1,9 @@
 # kubernetes
 
 ## [Kubernetes](https://kubernetes.io/)
+### [run pods](./run/README.md)
+
+
 ## [Helm](https://helm.sh/)
 
 ## [Basic](./basic/README.md)
