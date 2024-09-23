@@ -7,11 +7,10 @@ For configuration, kubectl looks for a file named `config` in the `$HOME/.kube` 
 You can specify other kubeconfig files by setting the `KUBECONFIG` environment variable or by setting the `--kubeconfig` flag.
 
 
-## [Install and Setup Kubectl `kubectl`](https://kubernetes.io/docs/tasks/tools/#kubectl
+## [Install and Setup  `kubectl`](https://kubernetes.io/docs/tasks/tools/#kubectl)
 네, **`kubectl`**은 Kubernetes 클러스터를 관리하는 커맨드 라인 도구로, 별도로 설치해야 합니다. `kubectl`은 Kubernetes API와 통신하여 클러스터 관리 작업을 수행합니다. Ubuntu에서 `kubectl`을 설치하려면 다음 단계를 따르면 됩니다.
 
 ### On Linux
-
 
 ```bash
 curl -L0 "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
