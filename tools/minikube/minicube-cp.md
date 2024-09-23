@@ -55,3 +55,8 @@ sudo systemctl restart docker
 ---
 
 이렇게 하면 `minikube cp` 명령을 사용하여 로컬 파일을 Minikube 내부로 복사할 수 있으며, 필요 시 Docker 환경에서도 해당 파일을 사용할 수 있습니다.
+
+
+#
+eval $(minikube docker-env)
+docker build -t my-image .
